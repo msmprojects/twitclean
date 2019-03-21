@@ -1,0 +1,23 @@
+# github.com/ChimeraCoder/anaconda v2.0.0+incompatible
+github.com/ChimeraCoder/anaconda
+# github.com/ChimeraCoder/tokenbucket v0.0.0-20131201223612-c5a927568de7
+github.com/ChimeraCoder/tokenbucket
+# github.com/azr/backoff v0.0.0-20160115115103-53511d3c7330
+github.com/azr/backoff
+# github.com/dustin/go-jsonpointer v0.0.0-20160814072949-ba0abeacc3dc
+github.com/dustin/go-jsonpointer
+# github.com/dustin/gojson v0.0.0-20160307161227-2e71ec9dd5ad
+github.com/dustin/gojson
+# github.com/garyburd/go-oauth v0.0.0-20180319155456-bca2e7f09a17
+github.com/garyburd/go-oauth/oauth
+# github.com/konsorten/go-windows-terminal-sequences v1.0.1
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/sirupsen/logrus v1.4.0
+github.com/sirupsen/logrus
+# golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
+golang.org/x/crypto/ssh/terminal
+# golang.org/x/net v0.0.0-20190320064053-1272bf9dcd53
+golang.org/x/net/context
+# golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a
+golang.org/x/sys/unix
+golang.org/x/sys/windows
