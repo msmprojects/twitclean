@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"net/url"
 	"os"
 	"time"
@@ -26,7 +27,7 @@ func getTimeline(api *anaconda.TwitterApi) ([]anaconda.Tweet, error) {
 }
 
 func main() {
-	var tweetDays = flag.String("d", "28d", "days after which to delete a tweet")
+	var tweetDays = flag.Int("d", 28, "days after which to delete a tweet")
 	flag.Parse()
 
 	anaconda.SetConsumerKey(os.Getenv("TC_TWITTER_CONSUMER_KEY"))
@@ -39,14 +40,20 @@ func main() {
 	log.SetFormatter(fmter)
 	log.SetLevel(log.InfoLevel)
 
-	ageLimit, err := time.ParseDuration(*tweetDays)
+	tweetHours := fmt.Sprintf("%dh", *tweetDays*24)
+
+	log.Info("STARTED: ", *tweetDays, " days (", tweetHours, " hours)")
+
+	ageLimit, err := time.ParseDuration(tweetHours)
 	if err != nil {
-		log.Error("Could not parse tweetDays")
+		log.Error("Could not parse tweetDays:", err)
+		os.Exit(-1)
 	}
 
 	timeline, err := getTimeline(api)
 	if err != nil {
 		log.Error("Could not get timeline")
+		os.Exit(-1)
 	}
 
 	for _, t := range timeline {
