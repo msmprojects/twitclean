@@ -46,26 +46,26 @@ func main() {
 
 	ageLimit, err := time.ParseDuration(tweetHours)
 	if err != nil {
-		log.Error("Could not parse tweetDays:", err)
+		log.Error("Could not parse tweetDays: ", err)
 		os.Exit(-1)
 	}
 
 	timeline, err := getTimeline(api)
 	if err != nil {
-		log.Error("Could not get timeline")
+		log.Error("Could not get timeline: ", err)
 		os.Exit(-1)
 	}
 
 	for _, t := range timeline {
 		createdTime, err := t.CreatedAtTime()
 		if err != nil {
-			log.Error("Couldn't parse time ", err)
+			log.Error("Couldn't parse time: ", err)
 		} else {
 			if time.Since(createdTime) > ageLimit {
 				_, err := api.DeleteTweet(t.Id, true)
 				log.Info("DELETED: Age - ", time.Since(createdTime).Round(1*time.Minute), " - ", t.Text)
 				if err != nil {
-					log.Error("Failed to delete! ", err)
+					log.Error("Failed to delete: ", err)
 				}
 			}
 		}
