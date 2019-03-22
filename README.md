@@ -6,7 +6,7 @@ Why do this? Because no one needs dumb things they said on Twitter lasting longe
 
 ### Prerequisites
 
-- Go 1.10 or higher, since this uses Go Modules. Make sure you have `GO111MODULE` set appropriately for your system.
+- Go 1.11 or higher, since this uses Go Modules. Make sure you have `GO111MODULE` set appropriately for your system.
 - A Twitter application established for your Twitter account. Your application doesn't need to use "Log In With Twitter" but does need read and write permissions, which are the defaults when you create an app. There will be four values assigned to your application under "Keys and Tokens": two consumer API keys and two access tokens. Copy these and keep them safe until you need them later.
 
 ### To Build
