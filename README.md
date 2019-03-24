@@ -56,13 +56,15 @@ Add the program to your favorite job scheduler and enjoy an automated ephemeral 
 
 ### WARNING
 
-*Be warned*, running this program is a *destructive* act. 
+Running this program is a *destructive* act. 
 
 *You will lose your tweets.*
 
 *You will lose your pinned tweet.*
 
 *You will lose your replies to other people's tweets.*
+
+And to quote [Twitter's help site](https://help.twitter.com/en/using-twitter/missing-tweets): "If you deleted a lot Tweets in a row or ran a mass-deletion program, the Tweet count displayed on your profile may not match the true number of Tweets there are."
 
 ### Thanks To
 
