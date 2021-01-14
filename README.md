@@ -1,8 +1,8 @@
 ## TwitClean
 
-This is a dumb little program, largely lifted from [Harold](https://github.com/adamdrake/harold), meant to be scheduled to run somewhere so you don't have to think about it. (In my case, it runs on my laptop, since that machine is generally on all day.) TwitClean deletes tweets older than a specific number of days from a specific timeline.
+This is a dumb little program, largely lifted from [Harold](https://github.com/adamdrake/harold), meant to be scheduled to run somewhere so you don't have to think about it. TwitClean deletes tweets older than a specific number of days from a specific timeline.
 
-Why do this? Because no one needs things they said on Twitter hanging around longer than their relevance half-life. That's probably only about 90 seconds for most tweets, but let's just pretend four weeks is the social media equivalent of prehistory. Twitter is toxic. Use [micro.blog](https://micro.blog) or [Mastodon](https://joinmastodon.org) or email or pretty much anything else instead. You'll be happier and the web will be  healthier.
+Why do this? Because no one needs things they said on Twitter hanging around longer than their relevance half-life. That's probably only about 90 seconds for most tweets, but let's just pretend four weeks is the social media equivalent of prehistory. Twitter is toxic. Use [micro.blog](https://micro.blog) or [Mastodon](https://joinmastodon.org) or email or pretty much anything else instead. You'll be happier and the web will be healthier.
 
 ### Prerequisites
 
@@ -43,16 +43,7 @@ The default duration is 28 days:
 twitclean 
 ```
 
-I have the following shell script in my `$PATH`:
-
-```shell
-#!/bin/zsh
-twitclean -d 30 2>&1 >/dev/null | terminal-notifier
-```
-
-I'm using [terminal-notifier](https://github.com/julienXX/terminal-notifier) to post the execution results to my Mac's notifications. The `twitclean` executable prints all of its output to `stderr`, so a little output redirection is necessary, hence the `2>&1 >/dev/null |` bits.
-
-Add the program to your favorite job scheduler and enjoy an automated ephemeral social media presence. (Sadly, on current versions of macOS, the `cron` scheduler has been made unavailable, which should be a crime, and you instead get to wrestle with `launchd`'s byzantine configurations; I recommend [LaunchControl](http://www.soma-zone.com/LaunchControl/), as it is the only GUI for `launchd` still maintained.)
+Add the program to your favorite job scheduler and enjoy an automated ephemeral social media presence. As of this writing, I run the program in a Github Action, the workflow for which is included in this repository.
 
 ### WARNING
 
