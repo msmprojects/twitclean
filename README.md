@@ -43,7 +43,11 @@ The default duration is 28 days:
 twitclean 
 ```
 
-Add the program to your favorite job scheduler and enjoy an automated ephemeral social media presence. As of this writing, I run the program in a Github Action, the workflow for which is included in this repository.
+Add the program to your favorite job scheduler and enjoy an automated ephemeral social media presence. As of this writing, I run the program in a Github Action, the workflow for which is included in this repository. Please note regarding this, from [GitHub's workflow docs](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow):
+
+> Warning: To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.
+
+So, if you want this to run for you, fork it into a private repo and enable the workflow there.
 
 ### WARNING
 
