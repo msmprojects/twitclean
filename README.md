@@ -47,7 +47,7 @@ Add the program to your favorite job scheduler and enjoy an automated ephemeral 
 
 > Warning: To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days.
 
-So, if you want this to run for you, fork it into a private repo and enable the workflow there.
+So, if you want this to run for you on GitHub, you'll need to *copy* it in whole into a private repo (sorry, but GitHub will not let you make private copies of public repos) and enable the workflow there.
 
 ### WARNING
 
